@@ -4,7 +4,7 @@
 
 <div class="max-w-5xl mx-auto">
 
-    <a href="/projects" class="text-blue-400 hover:underline text-sm mb-8 inline-block">
+    <a href="{{ route('projects.index') }}" class="text-blue-400 hover:underline text-sm mb-8 inline-block">
         ← Projects
     </a>
 
