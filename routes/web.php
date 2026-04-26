@@ -1,19 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [PageController::class, 'home']);
+Route::get('/about', [PageController::class, 'about']);
+Route::get('/projects', [PageController::class, 'projects']);
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::post('/contact', [PageController::class, 'send'])->name('contact.send');
 
-Route::get('/projects', function () {
-    return view('projects');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
