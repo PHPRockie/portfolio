@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Message;
+use App\Models\Project;
 
 class PageController extends Controller
 {
@@ -19,7 +20,7 @@ class PageController extends Controller
 
     public function projects()
     {
-        $projects = \App\Models\Project::orderBy('sort_order')->get();
+        $projects = Project::orderBy('sort_order')->get();
         return view('projects.index', compact('projects'));
     }
 

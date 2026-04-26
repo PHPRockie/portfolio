@@ -6,21 +6,22 @@
 
     <h1 class="text-3xl font-bold mb-10">Projects</h1>
 
+    @php
+        $tagColors = [
+            'Laravel'      => 'bg-blue-600',
+            'PHP'          => 'bg-blue-600',
+            'MySQL'        => 'bg-green-600',
+            'SQLite'       => 'bg-green-600',
+            'Tailwind CSS' => 'bg-purple-600',
+            'JavaScript'   => 'bg-yellow-600',
+            'Vite'         => 'bg-orange-600',
+            'Blade'        => 'bg-red-700',
+        ];
+    @endphp
+
     <div class="grid md:grid-cols-2 gap-8">
 
         @foreach ($projects as $project)
-        @php
-            $tagColors = [
-                'Laravel'      => 'bg-blue-600',
-                'PHP'          => 'bg-blue-600',
-                'MySQL'        => 'bg-green-600',
-                'SQLite'       => 'bg-green-600',
-                'Tailwind CSS' => 'bg-purple-600',
-                'JavaScript'   => 'bg-yellow-600',
-                'Vite'         => 'bg-orange-600',
-                'Blade'        => 'bg-red-700',
-            ];
-        @endphp
         <div class="bg-gray-800 rounded-lg p-6 hover:scale-105 transition flex flex-col justify-between">
             <div>
                 <h2 class="text-xl font-semibold mb-2">{{ $project->title }}</h2>
