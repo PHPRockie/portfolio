@@ -24,6 +24,12 @@ class PageController extends Controller
         return view('projects.index', compact('projects'));
     }
 
+    public function show(string $slug)
+    {
+        $project = Project::where('slug', $slug)->firstOrFail();
+        return view('projects.show', compact('project'));
+    }
+
     public function contact()
     {
         return view('contact');

@@ -41,7 +41,7 @@
                         GitHub ↗
                     </a>
                 @endif
-                <a href="/projects/{{ $project->slug }}"
+                <a href="{{ route('projects.show', $project->slug) }}"
                    class="text-sm text-gray-300 border border-gray-600 px-3 py-1 rounded hover:bg-gray-700 transition">
                     Details →
                 </a>
