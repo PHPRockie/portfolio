@@ -22,7 +22,7 @@
            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded text-white font-semibold transition">
             View Projects
         </a>
-        <a href="https://github.com" target="_blank"
+        <a href="https://github.com/PHPRockie" target="_blank"
            class="px-6 py-3 border border-gray-600 rounded hover:bg-gray-800 transition">
             GitHub ↗
         </a>
