@@ -18,20 +18,32 @@
 
         <div>
             <label class="block text-sm mb-1">Name</label>
-            <input type="text" name="name" required
-                class="w-full rounded bg-gray-900 border border-gray-700 px-3 py-2 focus:outline-none focus:border-blue-500">
+            <input type="text" name="name" value="{{ old('name') }}" required
+                class="w-full rounded bg-gray-900 border border-gray-700 px-3 py-2 focus:outline-none focus:border-blue-500
+                       @error('name') border-red-500 @enderror">
+            @error('name')
+                <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
+            @enderror
         </div>
 
         <div>
             <label class="block text-sm mb-1">Email</label>
-            <input type="email" name="email" required
-                class="w-full rounded bg-gray-900 border border-gray-700 px-3 py-2 focus:outline-none focus:border-blue-500">
+            <input type="email" name="email" value="{{ old('email') }}" required
+                class="w-full rounded bg-gray-900 border border-gray-700 px-3 py-2 focus:outline-none focus:border-blue-500
+                       @error('email') border-red-500 @enderror">
+            @error('email')
+                <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
+            @enderror
         </div>
 
         <div>
             <label class="block text-sm mb-1">Message</label>
             <textarea name="message" rows="4" required
-                class="w-full rounded bg-gray-900 border border-gray-700 px-3 py-2 focus:outline-none focus:border-blue-500"></textarea>
+                class="w-full rounded bg-gray-900 border border-gray-700 px-3 py-2 focus:outline-none focus:border-blue-500
+                       @error('message') border-red-500 @enderror">{{ old('message') }}</textarea>
+            @error('message')
+                <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
+            @enderror
         </div>
 
         <button type="submit"
