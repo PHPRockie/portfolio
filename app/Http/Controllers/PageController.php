@@ -19,7 +19,8 @@ class PageController extends Controller
 
     public function projects()
     {
-        return view('projects');
+        $projects = \App\Models\Project::orderBy('sort_order')->get();
+        return view('projects.index', compact('projects'));
     }
 
     public function contact()
