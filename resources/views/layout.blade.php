@@ -98,7 +98,7 @@
         <span>© {{ date('Y') }} Jose C Garcia — Built with Laravel & Tailwind</span>
         <div class="flex gap-5">
             <a href="https://github.com/PHPRockie" target="_blank" class="hover:text-gray-300 transition">GitHub</a>
-            <a href="https://linkedin.com/in/YOUR-LINKEDIN-SLUG" target="_blank" class="hover:text-gray-300 transition">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/jose-garcia-2b9142407" target="_blank" class="hover:text-gray-300 transition">LinkedIn</a>
         </div>
     </div>
 </footer>

@@ -28,7 +28,7 @@
            class="px-6 py-3 border border-gray-600 rounded hover:bg-gray-800 transition">
             GitHub ↗
         </a>
-        <a href="https://linkedin.com/in/YOUR-LINKEDIN-SLUG" target="_blank"
+        <a href="https://www.linkedin.com/in/jose-garcia-2b9142407" target="_blank"
            class="px-6 py-3 border border-gray-600 rounded hover:bg-gray-800 transition">
             LinkedIn ↗
         </a>
