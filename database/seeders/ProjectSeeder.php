@@ -70,5 +70,45 @@ class ProjectSeeder extends Seeder
             ],
             'sort_order' => 3,
         ]);
+
+        Project::create([
+            'title' => 'Tramp & Mini',
+            'slug' => 'tramp-and-mini',
+            'summary' => 'Visual training games for trampoline and double mini gymnasts.',
+            'description' => 'A full-stack React application for gymnastics trampoline and tumbling athletes. It takes a gamified approach to practice — instead of plain checklists, athletes interact with visual games tied to real training goals. Backed by Supabase for real-time data and built with a modern TypeScript stack.',
+            'tech_stack' => ['React', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Vite'],
+            'github_url' => 'https://github.com/PHPRockie/trampandmini',
+            'live_url' => null,
+            'featured' => true,
+            'problem' => 'Traditional goal tracking feels disconnected from practice. Athletes needed a more engaging way to work through training objectives on trampoline and double mini without staring at a checklist.',
+            'solution' => 'Built interactive visual games that map directly to gymnastics drills and goals. Supabase handles persistence and real-time updates, while shadcn/ui components keep the interface clean and responsive.',
+            'highlights' => [
+                'Visual game interface tied to real gymnastics training goals',
+                'Supabase backend for real-time data persistence',
+                'End-to-end tests with Playwright, unit tests with Vitest',
+                'Built with React, TypeScript, Tailwind CSS, and shadcn/ui',
+            ],
+            'sort_order' => 4,
+        ]);
+
+        Project::create([
+            'title' => 'Weather App',
+            'slug' => 'weather-app',
+            'summary' => 'React weather app with real-time forecasts and descriptive error handling.',
+            'description' => 'A React + TypeScript weather application that fetches real-time weather data from an external API and displays current conditions by location. Built with Vite and Tailwind CSS, with a focus on clean error handling — surfacing meaningful API error messages instead of generic failures.',
+            'tech_stack' => ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+            'github_url' => 'https://github.com/PHPRockie/Weather-App',
+            'live_url' => null,
+            'featured' => false,
+            'problem' => 'Wanted to practice building a complete React + TypeScript project from scratch: API consumption, async state management, and meaningful error feedback to the user.',
+            'solution' => 'Built a focused weather app using React, TypeScript, and Vite. Invested extra care in error handling so users see descriptive messages when an API call fails, not a generic "Search failed" notice.',
+            'highlights' => [
+                'Real-time weather data via external API',
+                'Descriptive API error messages surfaced to the user',
+                'Built with React, TypeScript, Vite, and Tailwind CSS',
+                'Vitest setup for unit testing',
+            ],
+            'sort_order' => 5,
+        ]);
     }
 }
