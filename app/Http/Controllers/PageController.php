@@ -10,7 +10,8 @@ class PageController extends Controller
 {
     public function home()
     {
-        return view('home');
+        $featured = Project::where('featured', true)->orderBy('sort_order')->get();
+        return view('home', compact('featured'));
     }
 
     public function about()

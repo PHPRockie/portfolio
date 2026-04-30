@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('title', $project->title)
+
 @section('content')
 
 <div class="max-w-5xl mx-auto">
@@ -7,19 +9,6 @@
     <a href="{{ route('projects.index') }}" class="text-blue-400 hover:underline text-sm mb-8 inline-block">
         ← Projects
     </a>
-
-    @php
-        $tagColors = [
-            'Laravel'      => 'bg-blue-600',
-            'PHP'          => 'bg-blue-600',
-            'MySQL'        => 'bg-green-600',
-            'SQLite'       => 'bg-green-600',
-            'Tailwind CSS' => 'bg-purple-600',
-            'JavaScript'   => 'bg-yellow-600',
-            'Vite'         => 'bg-orange-600',
-            'Blade'        => 'bg-red-700',
-        ];
-    @endphp
 
     <div class="grid md:grid-cols-3 gap-10">
 
@@ -52,11 +41,16 @@
             </div>
             @endif
 
-            @if ($project->github_url)
+            @if ($project->github_url && !$project->github_private)
             <a href="{{ $project->github_url }}" target="_blank"
                class="inline-block bg-blue-600 hover:bg-blue-700 transition px-6 py-2 rounded font-semibold">
                 View on GitHub ↗
             </a>
+            @elseif ($project->github_private)
+            <span class="inline-flex items-center gap-2 border border-gray-700 text-gray-500 px-6 py-2 rounded text-sm">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+                Private Repository
+            </span>
             @endif
 
         </div>

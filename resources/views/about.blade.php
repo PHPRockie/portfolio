@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('title', 'About')
+
 @section('content')
 
 <div class="max-w-5xl mx-auto">
@@ -58,7 +60,7 @@
             <h2 class="text-lg font-semibold mb-4">Stack</h2>
 
             <div class="grid grid-cols-2 gap-3 mb-8">
-                @foreach (['Laravel', 'PHP 8', 'MySQL', 'SQLite', 'Tailwind CSS', 'Blade', 'JavaScript', 'Vite'] as $tech)
+                @foreach (['Laravel', 'PHP 8', 'React', 'TypeScript', 'MySQL', 'SQLite', 'Supabase', 'Tailwind CSS', 'Blade', 'JavaScript', 'Vite', 'HTML & CSS'] as $tech)
                     <div class="bg-gray-800 px-4 py-3 rounded text-sm text-gray-300">
                         {{ $tech }}
                     </div>

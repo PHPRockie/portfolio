@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('title', 'Contact')
+
 @section('content')
 
 <div class="max-w-xl mx-auto">
