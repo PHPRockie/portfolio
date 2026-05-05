@@ -1,5 +1,9 @@
 <?php
 
+// Tell Laravel the request is HTTPS (Vercel terminates TLS at the edge)
+$_SERVER['HTTPS'] = 'on';
+$_SERVER['SERVER_PORT'] = 443;
+
 // Serve static files from public/ directly, before Laravel boots
 $uri = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $publicPath = realpath(__DIR__ . '/../public');
