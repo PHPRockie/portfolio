@@ -1,24 +1,27 @@
 <?php
 
-// Create writable directories Laravel needs in /tmp
+// Route Laravel internals away from the read-only filesystem
+foreach ([
+    'LOG_CHANNEL'     => 'stderr',
+    'SESSION_DRIVER'  => 'cookie',
+    'CACHE_STORE'     => 'array',
+] as $key => $value) {
+    $_ENV[$key] = $value;
+    putenv("$key=$value");
+}
+
+// Create writable dirs Laravel may still need
 foreach ([
     '/tmp/storage/app/public',
     '/tmp/storage/framework/cache/data',
-    '/tmp/storage/framework/sessions',
     '/tmp/storage/framework/views',
-    '/tmp/storage/logs',
-    '/tmp/bootstrap/cache',
 ] as $dir) {
     if (!is_dir($dir)) {
         mkdir($dir, 0755, true);
     }
 }
 
-// Point Laravel's storage and cache to /tmp
-$_ENV['APP_STORAGE'] = '/tmp/storage';
-putenv('APP_STORAGE=/tmp/storage');
-
-// Copy SQLite DB to /tmp so Laravel can write to it
+// Copy seeded SQLite DB to /tmp so Laravel can write to it
 $src  = __DIR__ . '/../database/database.sqlite';
 $dest = '/tmp/database.sqlite';
 if (!file_exists($dest)) {
