@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use App\Models\Message;
 use App\Models\Project;
 
@@ -47,14 +46,6 @@ class PageController extends Controller
 
         Message::create($request->only('name', 'email', 'message'));
 
-        Mail::raw(
-            "Name: {$request->name}\nEmail: {$request->email}\n\nMessage:\n{$request->message}",
-            function ($mail) use ($request) {
-                $mail->to(config('mail.from.address'))
-                     ->subject("Portfolio contact from {$request->name}");
-            }
-        );
-
-        return redirect('/contact')->with('success', 'Your message has been sent!');
+        return redirect('/contact')->with('success', 'Your message has been saved!');
     }
 }
