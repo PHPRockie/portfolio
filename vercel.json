@@ -1,15 +1,13 @@
 {
   "framework": null,
   "buildCommand": "npm run build",
-  "outputDirectory": "public/build",
+  "outputDirectory": "dist",
   "functions": {
     "api/index.php": {
       "runtime": "vercel-php@0.7.1"
     }
   },
   "routes": [
-    { "src": "/build/(.*)", "dest": "/$1" },
-    { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
