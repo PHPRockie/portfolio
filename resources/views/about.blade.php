@@ -67,11 +67,6 @@
                 @endforeach
             </div>
 
-            <h2 class="text-lg font-semibold mb-4">Resume</h2>
-            <a href="/resume.pdf" download
-               class="inline-block bg-gray-800 hover:bg-gray-700 transition px-5 py-2 rounded text-sm text-gray-300">
-                Download PDF ↓
-            </a>
         </div>
 
     </div>
