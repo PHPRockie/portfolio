@@ -39,7 +39,7 @@ class ProjectSeeder extends Seeder
             'tech_stack' => ['Laravel', 'Tailwind CSS', 'Vite'],
             'github_url' => 'https://github.com/PHPRockie/portfolio',
             'live_url' => null,
-            'featured' => false,
+            'featured' => true,
             'problem' => 'Needed a portfolio that itself demonstrates Laravel skills, not just describes them.',
             'solution' => 'Built the portfolio using the same stack I use professionally — data-driven project pages, proper routing, and a clean dark UI.',
             'highlights' => [
@@ -80,7 +80,7 @@ class ProjectSeeder extends Seeder
             'tech_stack' => ['Laravel', 'MySQL', 'Tailwind CSS'],
             'github_url' => 'https://github.com/PHPRockie/checkin-app',
             'live_url' => null,
-            'featured' => true,
+            'featured' => false,
             'problem' => 'Coaches were tracking attendance on paper. Records got lost between sessions, and generating monthly reports took hours of manual work.',
             'solution' => 'Built a role-based Laravel app where coaches check athletes in via a simple UI, data is stored instantly, and admins can export CSV reports with one click.',
             'highlights' => [
