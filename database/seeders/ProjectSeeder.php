@@ -12,26 +12,6 @@ class ProjectSeeder extends Seeder
         Project::query()->delete();
 
         Project::create([
-            'title' => 'Check-In App',
-            'slug' => 'check-in-app',
-            'summary' => 'Attendance management system for gymnastics classes.',
-            'description' => 'A Laravel web application built for a gymnastics gym to replace paper-based attendance tracking. Coaches check athletes in and out of classes, admins view daily reports, and the owner gets monthly summaries.',
-            'tech_stack' => ['Laravel', 'MySQL', 'Tailwind CSS'],
-            'github_url' => 'https://github.com/PHPRockie/checkin-app',
-            'live_url' => null,
-            'featured' => true,
-            'problem' => 'Coaches were tracking attendance on paper. Records got lost between sessions, and generating monthly reports took hours of manual work.',
-            'solution' => 'Built a role-based Laravel app where coaches check athletes in via a simple UI, data is stored instantly, and admins can export CSV reports with one click.',
-            'highlights' => [
-                'Role-based access: admin, coach, viewer',
-                'Real-time check-in / check-out with timestamps',
-                'Daily and monthly attendance reports',
-                'CSV export for record-keeping',
-            ],
-            'sort_order' => 1,
-        ]);
-
-        Project::create([
             'title' => 'Gymnastics Tracker',
             'slug' => 'gymnastics-tracker',
             'summary' => 'Training logger for athletes — sessions, goals, and progress.',
@@ -48,7 +28,7 @@ class ProjectSeeder extends Seeder
                 'Coach review dashboard',
                 'Zero-config SQLite backend',
             ],
-            'sort_order' => 2,
+            'sort_order' => 1,
         ]);
 
         Project::create([
@@ -68,7 +48,7 @@ class ProjectSeeder extends Seeder
                 'Tailwind CSS dark theme',
                 'Vite asset bundling',
             ],
-            'sort_order' => 3,
+            'sort_order' => 2,
         ]);
 
         Project::create([
@@ -88,6 +68,26 @@ class ProjectSeeder extends Seeder
                 'Point systems and skill-based rewards to drive engagement',
                 'Multiple game modes for coaches to target specific training goals',
                 'Supabase backend with real-time data persistence',
+            ],
+            'sort_order' => 3,
+        ]);
+
+        Project::create([
+            'title' => 'Check-In App',
+            'slug' => 'check-in-app',
+            'summary' => 'Attendance management system for gymnastics classes.',
+            'description' => 'A Laravel web application built for a gymnastics gym to replace paper-based attendance tracking. Coaches check athletes in and out of classes, admins view daily reports, and the owner gets monthly summaries.',
+            'tech_stack' => ['Laravel', 'MySQL', 'Tailwind CSS'],
+            'github_url' => 'https://github.com/PHPRockie/checkin-app',
+            'live_url' => null,
+            'featured' => true,
+            'problem' => 'Coaches were tracking attendance on paper. Records got lost between sessions, and generating monthly reports took hours of manual work.',
+            'solution' => 'Built a role-based Laravel app where coaches check athletes in via a simple UI, data is stored instantly, and admins can export CSV reports with one click.',
+            'highlights' => [
+                'Role-based access: admin, coach, viewer',
+                'Real-time check-in / check-out with timestamps',
+                'Daily and monthly attendance reports',
+                'CSV export for record-keeping',
             ],
             'sort_order' => 4,
         ]);
